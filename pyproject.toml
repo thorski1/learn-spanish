@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "learn-spanish"
+version = "1.0.0"
+description = "An interactive terminal game that teaches Spanish from beginner level — grammar, greetings, numbers, food, family, travel, daily life, and culture."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "thorski1" }]
+keywords = [
+    "terminal", "game", "spanish", "espanol", "language", "learning",
+    "education", "cli",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment :: Role-Playing",
+    "Topic :: Education",
+    "Topic :: Terminals",
+]
+dependencies = [
+    "rich>=13.0.0",
+    "quest-engine>=1.5.0",
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.20.0",
+    "jinja2>=3.0.0",
+    "python-multipart>=0.0.6",
+]
+
+[project.urls]
+Homepage      = "https://github.com/thorski1/learn-spanish"
+Repository    = "https://github.com/thorski1/learn-spanish"
+"Bug Tracker" = "https://github.com/thorski1/learn-spanish/issues"
+
+[project.scripts]
+learn-spanish          = "learn_spanish.main:main_spanish"
+basics-quest           = "learn_spanish.main:main_basics"
+greetings-es-quest     = "learn_spanish.main:main_greetings_es"
+numbers-es-quest       = "learn_spanish.main:main_numbers_es"
+food-es-quest          = "learn_spanish.main:main_food_es"
+family-es-quest        = "learn_spanish.main:main_family_es"
+travel-es-quest        = "learn_spanish.main:main_travel_es"
+daily-es-quest         = "learn_spanish.main:main_daily_es"
+culture-es-quest       = "learn_spanish.main:main_culture_es"
+
+[tool.setuptools.packages.find]
+where   = ["."]
+include = ["learn_spanish*"]
+
+[tool.setuptools.package-data]
+learn_spanish = ["skill-packs/**/*.py"]
