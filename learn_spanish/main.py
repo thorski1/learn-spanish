@@ -28,7 +28,7 @@ _WEB = "--web" in sys.argv
 
 SPANISH_PACKS = [
     "basics", "greetings_es", "numbers_es", "food_es",
-    "family_es", "travel_es", "daily_es", "culture_es", "colors_clothing", "weather_es",
+    "family_es", "travel_es", "daily_es", "culture_es", "colors_clothing", "weather_es", "restaurant_es",
 ]
 
 
